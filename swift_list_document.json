@@ -6,46 +6,150 @@
 					"desc":"Conoscere gli oggetti che si utilizzano per interagire con il sistema.",
 					"link":"https://developer.apple.com/documentation/appkit/core_app"
 				},
-				"Data Management":{},
-				"Resource Management":{},
-				"Views and Controls":{},
-				"View Management":{},
-				"Menus Cursors and the Dock":{},
-				"Windows Panels and Screens":{},
-				"Accessibility":{},
-				"Touch Bar":{},
-				"Animation":{},
-				"Drag and Drop":{},
-				"Sound Speech and Haptics":{},
-				"Mouse Keyboard and Trackpad":{},
-				"Gestures":{},
-				"Image and PDF":{},
-				"Drawing":{},
-				"Color":{},
-				"Printing":{},
-				"Text Display":{},
-				"TextKit":{},
-				"Fonts":{},
-				"NSAppleScript AppKit Additions":{}
-				"Functions":{},
-				"Data Types":{},
-				"Costants":{},
-				"Enumerations":{},
-				"Deprecated Symbols":{},
-				"class NSUserInterfaceCompressionOptions":{},
-				"protocol NSUserInterfaceCompression":{}
+				"Data Management":{
+					"desc":"Gestire i dati dell'app tramite l'accesso ai file e le associazioni di cacao.",
+					"link":"https://developer.apple.com/documentation/appkit/data_management"
+				},
+				"Resource Management":{
+					"desc":"Gestisci gli storyboard e i file di pennini contenenti l'interfaccia utente della tua app e impara come caricare i dati archiviati nei file di risorse.",
+					"link":"https://developer.apple.com/documentation/appkit/resource_management"
+				},
+				"Views and Controls":{
+					"desc":"Presenta e definisci le interazioni per i tuoi contenuti sullo schermo.",
+					"link":"https://developer.apple.com/documentation/appkit/views_and_controls"
+				},
+				"View Management":{
+					"desc":"Gestisci la tua interfaccia utente, inclusa la dimensione e la posizione delle viste in una finestra.",
+					"link":"https://developer.apple.com/documentation/appkit/view_management"
+				},
+				"Menus Cursors and the Dock":{
+					"desc":"Implementa menu e cursori per facilitare le interazioni con la tua app e usa la tessera Dock della tua app per trasmettere informazioni aggiornate.",
+					"link":"https://developer.apple.com/documentation/appkit/menus_cursors_and_the_dock"
+				},
+				"Windows Panels and Screens":{
+					"desc":"Organizza le tue gerarchie di visualizzazione e facilita la loro visualizzazione sullo schermo.",
+					"link":"https://developer.apple.com/documentation/appkit/windows_panels_and_screens"
+				},
+				"Accessibility":{
+					"desc":"Rendi la tua app più accessibile agli utenti con disabilità.",
+					"link":"https://developer.apple.com/documentation/appkit/accessibility"
+				},
+				"Touch Bar":{
+					"desc":"Visualizza contenuti e controlli interattivi nella Touch Bar.",
+					"link":"https://developer.apple.com/documentation/appkit/touch_bar"
+				},
+				"Animation":{
+					"desc":"Anima le tue visualizzazioni e altri contenuti per creare un'esperienza più coinvolgente per gli utenti.",
+					"link":"https://developer.apple.com/documentation/appkit/animation"
+				},
+				"Drag and Drop":{
+					"desc":"Supporta la manipolazione diretta dei contenuti della tua app utilizzando il trascinamento della selezione.",
+					"link":"https://developer.apple.com/documentation/appkit/drag_and_drop"
+				},
+				"Sound Speech and Haptics":{
+					"desc":"Riproduci suoni e feedback tattile e incorpora il riconoscimento vocale e la sintesi nell'interfaccia.",
+					"link":"https://developer.apple.com/documentation/appkit/sound_speech_and_haptics"
+				},
+				"Mouse Keyboard and Trackpad":{
+					"desc":"Gestire gli eventi relativi all'input del mouse, della tastiera e del trackpad.",
+					"link":"https://developer.apple.com/documentation/appkit/mouse_keyboard_and_trackpad"
+				},
+				"Gestures":{
+					"desc":"Incapsula la logica di gestione degli eventi della tua app nei riconoscimenti di gesti in modo da poter riutilizzare il codice in tutta l'app.",
+					"link":"https://developer.apple.com/documentation/appkit/gestures"
+				},
+				"Image and PDF":{
+					"desc":"Crea e gestisci immagini, in bitmap, PDF e altri formati.",
+					"link":"https://developer.apple.com/documentation/appkit/images_and_pdf"
+				},
+				"Drawing":{
+					"desc":"Disegna forme, immagini e altri contenuti sullo schermo",
+					"link":"https://developer.apple.com/documentation/appkit/drawing"
+				},
+				"Color":{
+					"desc":"Rappresenta i colori utilizzando i formati incorporati o personalizzati e offre agli utenti opzioni per la selezione e l'applicazione dei colori.",
+					"link":"https://developer.apple.com/documentation/appkit/color"
+				},
+				"Printing":{
+					"desc":"Visualizza i pannelli di stampa del sistema e gestisci il processo di stampa.",
+					"link":"https://developer.apple.com/documentation/appkit/printing"
+				},
+				"Text Display":{
+					"desc":"Visualizza il testo e controlla l'ortografia.",
+					"link":"https://developer.apple.com/documentation/appkit/text_display"
+				},
+				"TextKit":{
+					"desc":"Gestisci l'archiviazione del testo ed esegui il layout personalizzato di contenuti testuali nelle visualizzazioni dell'app.",
+					"link":"https://developer.apple.com/documentation/appkit/textkit"
+				},
+				"Fonts":{
+					"desc":"Gestisci i caratteri utilizzati per visualizzare il testo.",
+					"link":"https://developer.apple.com/documentation/appkit/fonts"
+				},
+				"NSAppleScript AppKit Additions":{
+					"desc":"Un metodo aggiunto per gestire l'origine di testo RTF.",
+					"link":"https://developer.apple.com/documentation/appkit/nsapplescript_appkit_additions"
+				}
+				"Functions":{
+					"desc":"Funzioni e macro simili a funzioni da utilizzare con più classi.",
+					"link":"https://developer.apple.com/documentation/appkit/functions"
+				},
+				"Data Types":{
+					"desc":"Tipi di dati da utilizzare con più classi.",
+					"link":"https://developer.apple.com/documentation/appkit/data_types"
+				},
+				"Costants":{
+					"desc":"Costanti da utilizzare con più classi.",
+					"link":"https://developer.apple.com/documentation/appkit/costants"
+				},
+				"Enumerations":{
+					"desc":"Enumerazioni da utilizzare con più classi.",
+					"link":"https://developer.apple.com/documentation/appkit/enumerations"
+				},
+				"Deprecated Symbols":{
+					"desc":"Simboli obsoleti",
+					"link":"https://developer.apple.com/documentation/appkit/deprecated_symbols"
+				},
+				"class NSUserInterfaceCompressionOptions":{
+					"desc":"Un oggetto che specifica in che modo gli elementi dell'interfaccia utente si ridimensionano quando lo spazio è limitato.",
+					"link":"https://developer.apple.com/documentation/appkit/nsuserinterfacecompressionoptions"
+				},
+				"protocol NSUserInterfaceCompression":{
+					"desc":"Un protocollo che descrive come visualizzare un controllo dell'interfaccia utente quando lo spazio è limitato.",
+					"link":"https://developer.apple.com/documentation/appkit/nsuserinterfacecompression"
+				}
 			},
-			"Foundation":{},
-			"Objective-C":{},
-			"Swift Standard Library":{},
-			"UIKit":{},
-			"WatchKit":{}
+			"Foundation":{
+				"notice":"in arrivo prossimamente"
+			},
+			"Objective-C":{
+				"notice":"in arrivo prossimamente"
+			},
+			"Swift Standard Library":{
+				"notice":"in arrivo prossimamente"
+			},
+			"UIKit":{
+				"notice":"in arrivo prossimamente"
+			},
+			"WatchKit":{
+				"notice":"in arrivo prossimamente"
+			}
 		},
-		"Graphics and Games":{},
-		"App Services":{},
-		"Media and Web":{},
-		"Developer Tools":{},
-		"System":{}
+		"Graphics and Games":{
+			"notice":"in arrivo prossimamente"
+		},
+		"App Services":{
+			"notice":"in arrivo prossimamente"
+		},
+		"Media and Web":{
+			"notice":"in arrivo prossimamente"
+		},
+		"Developer Tools":{
+			"notice":"in arrivo prossimamente"
+		},
+		"System":{
+			"notice":"in arrivo prossimamente"
+		}
 	}
 }
 
