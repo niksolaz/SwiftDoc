@@ -1,0 +1,53 @@
+{	
+	"todolistSwift":{
+		"App Frameworks":{
+			"AppKit":{
+				"Core App":{
+					"desc":"Conoscere gli oggetti che si utilizzano per interagire con il sistema.",
+					"link":"https://developer.apple.com/documentation/appkit/core_app"
+				},
+				"Data Management":{},
+				"Resource Management":{},
+				"Views and Controls":{},
+				"View Management":{},
+				"Menus Cursors and the Dock":{},
+				"Windows Panels and Screens":{},
+				"Accessibility":{},
+				"Touch Bar":{},
+				"Animation":{},
+				"Drag and Drop":{},
+				"Sound Speech and Haptics":{},
+				"Mouse Keyboard and Trackpad":{},
+				"Gestures":{},
+				"Image and PDF":{},
+				"Drawing":{},
+				"Color":{},
+				"Printing":{},
+				"Text Display":{},
+				"TextKit":{},
+				"Fonts":{},
+				"NSAppleScript AppKit Additions":{}
+				"Functions":{},
+				"Data Types":{},
+				"Costants":{},
+				"Enumerations":{},
+				"Deprecated Symbols":{},
+				"class NSUserInterfaceCompressionOptions":{},
+				"protocol NSUserInterfaceCompression":{}
+			},
+			"Foundation":{},
+			"Objective-C":{},
+			"Swift Standard Library":{},
+			"UIKit":{},
+			"WatchKit":{}
+		},
+		"Graphics and Games":{},
+		"App Services":{},
+		"Media and Web":{},
+		"Developer Tools":{},
+		"System":{}
+	}
+}
+
+
+
