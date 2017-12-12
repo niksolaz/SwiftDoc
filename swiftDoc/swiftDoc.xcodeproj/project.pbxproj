@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		369C52EEDB690C88823A17CE /* Pods_swiftDoc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2644167AA1A378BD211EF1D2 /* Pods_swiftDoc.framework */; };
 		440B51E21FDEDE38002D2D02 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 440B51E11FDEDE38002D2D02 /* GoogleService-Info.plist */; };
+		449FAA861FE027A400935153 /* swiftDocViewControllerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449FAA851FE027A400935153 /* swiftDocViewControllerTableViewController.swift */; };
 		44BC3FD41FDEDADA006FDB9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BC3FD31FDEDADA006FDB9D /* AppDelegate.swift */; };
 		44BC3FD61FDEDADA006FDB9D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BC3FD51FDEDADA006FDB9D /* ViewController.swift */; };
 		44BC3FD91FDEDADA006FDB9D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44BC3FD71FDEDADA006FDB9D /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 		1896959E936940DA841BD3F1 /* Pods-swiftDoc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swiftDoc.debug.xcconfig"; path = "Pods/Target Support Files/Pods-swiftDoc/Pods-swiftDoc.debug.xcconfig"; sourceTree = "<group>"; };
 		2644167AA1A378BD211EF1D2 /* Pods_swiftDoc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swiftDoc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		440B51E11FDEDE38002D2D02 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; name = "GoogleService-Info.plist"; path = "../GoogleService-Info.plist"; sourceTree = "<group>"; };
+		449FAA851FE027A400935153 /* swiftDocViewControllerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftDocViewControllerTableViewController.swift; sourceTree = "<group>"; };
 		44BC3FD01FDEDADA006FDB9D /* swiftDoc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = swiftDoc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44BC3FD31FDEDADA006FDB9D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		44BC3FD51FDEDADA006FDB9D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 				440B51E11FDEDE38002D2D02 /* GoogleService-Info.plist */,
 				44BC3FD51FDEDADA006FDB9D /* ViewController.swift */,
 				44BC3FD71FDEDADA006FDB9D /* Main.storyboard */,
+				449FAA851FE027A400935153 /* swiftDocViewControllerTableViewController.swift */,
 				44BC3FDA1FDEDADA006FDB9D /* Assets.xcassets */,
 				44BC3FDC1FDEDADA006FDB9D /* LaunchScreen.storyboard */,
 				44BC3FDF1FDEDADA006FDB9D /* Info.plist */,
@@ -190,21 +193,15 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-swiftDoc/Pods-swiftDoc-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleAPIClientForREST/GoogleAPIClientForREST.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
-				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleAPIClientForREST.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -239,6 +236,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				44BC3FD61FDEDADA006FDB9D /* ViewController.swift in Sources */,
+				449FAA861FE027A400935153 /* swiftDocViewControllerTableViewController.swift in Sources */,
 				44BC3FD41FDEDADA006FDB9D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
