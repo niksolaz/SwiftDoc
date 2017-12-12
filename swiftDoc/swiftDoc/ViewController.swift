@@ -8,12 +8,18 @@
 
 import UIKit
 import Firebase
+import WebKit
 
 class ViewController: UIViewController {
 
+    let todolist_DB_Ref: DatabaseReference = Database.database().reference().child("todolistSwift")
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         loginAnonymous()
+        
+        
     }
     
     func loginAnonymous(){

@@ -89,7 +89,7 @@
 				"NSAppleScript AppKit Additions":{
 					"desc":"Un metodo aggiunto per gestire l'origine di testo RTF.",
 					"link":"https://developer.apple.com/documentation/appkit/nsapplescript_appkit_additions"
-				}
+				},
 				"Functions":{
 					"desc":"Funzioni e macro simili a funzioni da utilizzare con più classi.",
 					"link":"https://developer.apple.com/documentation/appkit/functions"
