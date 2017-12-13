@@ -15,6 +15,7 @@
 		44BC3FD91FDEDADA006FDB9D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44BC3FD71FDEDADA006FDB9D /* Main.storyboard */; };
 		44BC3FDB1FDEDADA006FDB9D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44BC3FDA1FDEDADA006FDB9D /* Assets.xcassets */; };
 		44BC3FDE1FDEDADA006FDB9D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44BC3FDC1FDEDADA006FDB9D /* LaunchScreen.storyboard */; };
+		44E70AC21FE164B5006451A1 /* TodoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E70AC11FE164B5006451A1 /* TodoItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		44BC3FDA1FDEDADA006FDB9D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		44BC3FDD1FDEDADA006FDB9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		44BC3FDF1FDEDADA006FDB9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		44E70AC11FE164B5006451A1 /* TodoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 				44BC3FD51FDEDADA006FDB9D /* ViewController.swift */,
 				44BC3FD71FDEDADA006FDB9D /* Main.storyboard */,
 				449FAA851FE027A400935153 /* swiftDocViewControllerTableViewController.swift */,
+				44E70AC11FE164B5006451A1 /* TodoItem.swift */,
 				44BC3FDA1FDEDADA006FDB9D /* Assets.xcassets */,
 				44BC3FDC1FDEDADA006FDB9D /* LaunchScreen.storyboard */,
 				44BC3FDF1FDEDADA006FDB9D /* Info.plist */,
@@ -237,6 +240,7 @@
 			files = (
 				44BC3FD61FDEDADA006FDB9D /* ViewController.swift in Sources */,
 				449FAA861FE027A400935153 /* swiftDocViewControllerTableViewController.swift in Sources */,
+				44E70AC21FE164B5006451A1 /* TodoItem.swift in Sources */,
 				44BC3FD41FDEDADA006FDB9D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
