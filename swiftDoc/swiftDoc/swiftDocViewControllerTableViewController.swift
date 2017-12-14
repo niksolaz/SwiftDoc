@@ -14,13 +14,33 @@ class swiftDocViewControllerTableViewController: UITableViewController {
     // SwiftDoc --> SwD
     var todoItemsSwD:[TodoItem] = []
     
+    let todoList_DB_Ref: DatabaseReference = Database.database().reference().child("todolistSwift")
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let Todo1 = TodoItem(name:"Test Items",desc:"bla bla bla bla",link:"https://www.nicolasolazzo.com/")
+        todoList_DB_Ref.observe(.value) { (snapshot) in
+            for item in snapshot.children {
+                
+                let todoData = item as! DataSnapshot
+                let itemSwD = todoData.value as! [String:Any]
+                
+                let name:String = itemSwD["name"] as! String
+                print("name")
+                let desc:String = itemSwD["desc"] as! String
+                print("desc")
+                let link:String = itemSwD["link"] as! String
+                print("link")
+                let todoSwD = TodoItem(name:name, desc:desc, link:link)
+                print("todoSwD")
+                self.todoItemsSwD.append(todoSwD)
+            }
+            self.tableView.reloadData()
+        }
+        /*
+        let Todo1 = TodoItem(name:"Test Items Super 1", desc: "", link: "")
         todoItemsSwD.append(Todo1)
-    
-        
+        */
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,7 +52,7 @@ class swiftDocViewControllerTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 10
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

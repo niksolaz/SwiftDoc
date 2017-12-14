@@ -17,22 +17,23 @@ class ViewController: UIViewController {
      and .child(pathString) is /name databse
      
  */
-    let todolist_DB_Ref: DatabaseReference = Database.database().reference().child("todolistSwift")
+    
+    //let todolist_DB_Ref: DatabaseReference = Database.database().reference().child("todolistSwift")
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         //call login anonymous
         loginAnonymous()
-        
-        //test connection database
-        //add item with child test
-        let item = todolist_DB_Ref.child("test")
-        //add value set
-        let values: [String: Any] = ["name":"test connection"]
-        //set item with value
-        item.setValue(values)
-        
+    
+        //***test connection database
+        //***add item with child test
+        //let item = todolist_DB_Ref.child("test")
+        //***add value set
+        //let values: [String: Any] = ["name":"test connection"]
+        //***set item with value
+        //item.setValue(values)
+ 
     }
     //Create login anonymous to firebase
     func loginAnonymous(){
