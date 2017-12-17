@@ -14,12 +14,13 @@ class swiftDocViewControllerTableViewController: UITableViewController {
     // SwiftDoc --> SwD
     var todoItemsSwD:[TodoItem] = []
     
-    let todoList_DB_Ref: DatabaseReference = Database.database().reference().child("todolistSwift")
+    let ref: DatabaseReference =  Database.database().reference().child("todolistSwift")
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        todoList_DB_Ref.observe(.value) { (snapshot) in
+        print(ref.root)
+        ref.observe(.value) { (snapshot) in
             for item in snapshot.children {
                 
                 let todoData = item as! DataSnapshot
@@ -31,8 +32,9 @@ class swiftDocViewControllerTableViewController: UITableViewController {
                 print("desc")
                 let link:String = itemSwD["link"] as! String
                 print("link")
+                
                 let todoSwD = TodoItem(name:name, desc:desc, link:link)
-                print("todoSwD")
+                
                 self.todoItemsSwD.append(todoSwD)
             }
             self.tableView.reloadData()
