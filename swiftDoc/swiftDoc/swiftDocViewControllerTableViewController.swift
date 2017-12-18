@@ -22,19 +22,17 @@ class swiftDocViewControllerTableViewController: UITableViewController {
         print(ref.root)
         ref.observe(.value) { (snapshot) in
             for item in snapshot.children {
-                
+                print("item in snapshot")
                 let todoData = item as! DataSnapshot
+                print("todoData")
                 let itemSwD = todoData.value as! [String:Any]
-                
-                let name:String = itemSwD["name"] as! String
+                print("itemSwD")
+                let name:String? = String(describing: itemSwD["name"])
                 print("name")
-                let desc:String = itemSwD["desc"] as! String
-                print("desc")
-                let link:String = itemSwD["link"] as! String
-                print("link")
                 
-                let todoSwD = TodoItem(name:name, desc:desc, link:link)
                 
+                let todoSwD = TodoItem(name:name!)
+                print("todoSwD")
                 self.todoItemsSwD.append(todoSwD)
             }
             self.tableView.reloadData()
