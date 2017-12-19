@@ -10,9 +10,10 @@ import Foundation
 //create basic Item
 class TodoItem {
     var name:String
+    var notice:String
     
-    init(name:String){
+    init(name:String, notice:String){
         self.name = name
-        
+        self.notice = notice
     }
 }
