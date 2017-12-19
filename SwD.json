@@ -1,0 +1,28 @@
+{	
+	"todolistSwift":{
+		"App Frameworks":{
+			"name":"App Frameworks",
+			"notice":"in arrivo prossimamente"
+		},
+		"Graphics and Games":{
+			"name":"Graphics and Games",
+			"notice":"in arrivo prossimamente"
+		},
+		"App Services":{
+			"name":"App Services",
+			"notice":"in arrivo prossimamente"
+		},
+		"Media and Web":{
+			"name":"Media and Web",
+			"notice":"in arrivo prossimamente"
+		},
+		"Developer Tools":{
+			"name":"Developer Tools",
+			"notice":"in arrivo prossimamente"
+		},
+		"System":{
+			"name":"System",
+			"notice":"in arrivo prossimamente"
+		}
+	}
+}
