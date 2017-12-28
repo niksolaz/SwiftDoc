@@ -1,8 +1,8 @@
 //
-//  swiftDocViewControllerTableViewController.swift
+//  SegueSwDTableViewController.swift
 //  swiftDoc
 //
-//  Created by Nicola Solazzo on 12/12/17.
+//  Created by Nicola Solazzo on 28/12/17.
 //  Copyright © 2017 Nicola Solazzo. All rights reserved.
 //
 
@@ -10,15 +10,15 @@ import UIKit
 import Firebase
 import WebKit
 
-class swiftDocViewControllerTableViewController: UITableViewController {
-    // SwiftDoc --> SwD
+class SegueSwDTableViewController: UITableViewController {
+    
     var todoItemsSwD:[TodoItem] = []
     
-    let ref: DatabaseReference =  Database.database().reference().child("todolistSwift")
-    
+    let ref: DatabaseReference =  Database.database().reference().child("todolistSwift/AppFrameworks")
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         print(ref)
         ref.observe(.value) { (snapshot) in
             for item in snapshot.children {
@@ -38,10 +38,6 @@ class swiftDocViewControllerTableViewController: UITableViewController {
             }
             self.tableView.reloadData()
         }
-        /*
-        let Todo1 = TodoItem(name:"Test Items Super 1", desc: "", link: "")
-        todoItemsSwD.append(Todo1)
-        */
     }
 
     override func didReceiveMemoryWarning() {
@@ -61,18 +57,16 @@ class swiftDocViewControllerTableViewController: UITableViewController {
         return todoItemsSwD.count
     }
 
-   
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TodoListCell", for: indexPath)
-
+        
         let todoSwD = todoItemsSwD[indexPath.row]
         cell.textLabel?.text = todoSwD.name
         
         return cell
     }
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "SwDDetail", sender: nil)
-    }
+    
 
     /*
     // Override to support conditional editing of the table view.
@@ -118,6 +112,5 @@ class swiftDocViewControllerTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
-    
 
 }
