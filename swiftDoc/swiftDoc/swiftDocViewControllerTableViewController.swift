@@ -118,8 +118,11 @@ class swiftDocViewControllerTableViewController: UITableViewController {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         if segue.identifier == "SwDDetail" {
-            let vc = segue.destination as! swiftDocViewControllerTableViewController
-            print(vc.firebaseParse())
+            let vc = segue.destination
+            if vc is SegueSwDTableViewController {
+                vc.loadView()
+            }
+            
         }
     }
     
