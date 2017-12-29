@@ -11,9 +11,11 @@ import Foundation
 class TodoItem {
     var name:String
     var notice:String
+    var list:Any?
     
-    init(name:String, notice:String){
+    init(name:String, notice:String, list:Any?){
         self.name = name
         self.notice = notice
+        self.list = list
     }
 }

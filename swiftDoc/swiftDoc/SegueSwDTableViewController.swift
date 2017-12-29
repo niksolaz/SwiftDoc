@@ -11,17 +11,15 @@ import Firebase
 import WebKit
 
 class SegueSwDTableViewController: UITableViewController {
-    
+    // SwiftDoc --> SwD
     var todoItemsSwD:[TodoItem] = []
     
     let ref: DatabaseReference =  Database.database().reference().child("todolistSwift/AppFrameworks")
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        print(ref)
+    func firebaseParse() {
+        
         ref.observe(.value) { (snapshot) in
             for item in snapshot.children {
+                
                 
                 let todoData = item as! DataSnapshot
                 
@@ -32,14 +30,20 @@ class SegueSwDTableViewController: UITableViewController {
                 let notice:String = itemSwD["notice"] as! String
                 print(notice)
                 
-                let todoSwD = TodoItem(name:name, notice:notice)
+                let list:Any = itemSwD["list"] as Any
+                print(list)
+                
+                let todoSwD = TodoItem(name:name, notice:notice, list:list)
                 print(todoSwD)
                 self.todoItemsSwD.append(todoSwD)
             }
             self.tableView.reloadData()
         }
     }
-
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        firebaseParse()
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

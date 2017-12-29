@@ -15,14 +15,12 @@ class swiftDocViewControllerTableViewController: UITableViewController {
     var todoItemsSwD:[TodoItem] = []
     
     let ref: DatabaseReference =  Database.database().reference().child("todolistSwift")
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    func firebaseParse() {
         
-        print(ref)
         ref.observe(.value) { (snapshot) in
             for item in snapshot.children {
                 
+               
                 let todoData = item as! DataSnapshot
                 
                 let itemSwD = todoData.value as! [String:Any]
@@ -32,16 +30,19 @@ class swiftDocViewControllerTableViewController: UITableViewController {
                 let notice:String = itemSwD["notice"] as! String
                 print(notice)
                 
-                let todoSwD = TodoItem(name:name, notice:notice)
+                let list:Any = itemSwD["list"] as Any
+                print(list)
+                
+                let todoSwD = TodoItem(name:name, notice:notice, list:list)
                 print(todoSwD)
                 self.todoItemsSwD.append(todoSwD)
             }
             self.tableView.reloadData()
         }
-        /*
-        let Todo1 = TodoItem(name:"Test Items Super 1", desc: "", link: "")
-        todoItemsSwD.append(Todo1)
-        */
+    }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+       firebaseParse()
     }
 
     override func didReceiveMemoryWarning() {
@@ -71,9 +72,9 @@ class swiftDocViewControllerTableViewController: UITableViewController {
         return cell
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "SwDDetail", sender: nil)
+        performSegue(withIdentifier: "SwDDetail", sender: todoItemsSwD)
     }
-
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -109,15 +110,19 @@ class swiftDocViewControllerTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        if segue.identifier == "SwDDetail" {
+            let vc = segue.destination as! swiftDocViewControllerTableViewController
+            print(vc.firebaseParse())
+        }
     }
-    */
+    
     
 
 }
