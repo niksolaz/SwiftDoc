@@ -118,9 +118,10 @@ class swiftDocViewControllerTableViewController: UITableViewController {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         if segue.identifier == "SwDDetail" {
-            let vc = segue.destination
-            if vc is SegueSwDTableViewController {
-                vc.loadView()
+            //let vc = segue.destination as! SegueSwDTableViewController
+            if let detailVC = segue.destination as? SegueSwDTableViewController {
+                let row = tableView.indexPathForSelectedRow!.row
+                detailVC.item = todoItemsSwD[row]
             }
             
         }

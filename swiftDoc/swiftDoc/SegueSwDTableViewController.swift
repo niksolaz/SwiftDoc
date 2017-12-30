@@ -13,8 +13,10 @@ import WebKit
 class SegueSwDTableViewController: UITableViewController {
     // SwiftDoc --> SwD
     var todoItemsSwD:[TodoItem] = []
+    var item:TodoItem?
+    //let ref: DatabaseReference =  Database.database().reference().child("todolistSwift/AppFrameworks")
     
-    let ref: DatabaseReference =  Database.database().reference().child("todolistSwift/AppFrameworks")
+    /*
     func firebaseParse() {
         
         ref.observe(.value) { (snapshot) in
@@ -40,9 +42,17 @@ class SegueSwDTableViewController: UITableViewController {
             self.tableView.reloadData()
         }
     }
+    */
     override func viewDidLoad() {
         super.viewDidLoad()
-        firebaseParse()
+        print("Hello World")
+        print(self.item!.name)
+        //firebaseParse()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        var a = 2421
+        var n = 222
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
