@@ -46,14 +46,13 @@ class SegueSwDTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print("Hello World")
-        print(self.item!.name)
+        let listes = self.item!.list ?? AnyObject.self
+        print((listes as AnyObject).value(forKey: "name"))
+        
         //firebaseParse()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        var a = 2421
-        var n = 222
-    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -76,7 +75,7 @@ class SegueSwDTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TodoListCell", for: indexPath)
         
         let todoSwD = todoItemsSwD[indexPath.row]
-        cell.textLabel?.text = todoSwD.name
+        cell.textLabel?.text = todoSwD.list as? String
         
         return cell
     }
