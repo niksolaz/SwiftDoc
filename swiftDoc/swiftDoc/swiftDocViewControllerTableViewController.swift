@@ -30,10 +30,10 @@ class swiftDocViewControllerTableViewController: UITableViewController {
                 let notice:String = itemSwD["notice"] as! String
                 print(notice)
                 
-                let list:Any = itemSwD["list"] as Any
-                print(list)
+                let list:AnyObject = itemSwD["list"] as AnyObject
+                print("result: \(list)")
                 
-                let todoSwD = TodoItem(name:name, notice:notice, list:list)
+                let todoSwD = TodoItem(name:name, notice:notice, list:list as? [NSAttributedStringKey : Any])
                 print(todoSwD)
                 self.todoItemsSwD.append(todoSwD)
             }

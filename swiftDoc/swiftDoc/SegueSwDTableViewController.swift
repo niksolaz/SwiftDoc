@@ -14,42 +14,17 @@ class SegueSwDTableViewController: UITableViewController {
     // SwiftDoc --> SwD
     var todoItemsSwD:[TodoItem] = []
     var item:TodoItem?
-    //let ref: DatabaseReference =  Database.database().reference().child("todolistSwift/AppFrameworks")
     
-    /*
-    func firebaseParse() {
-        
-        ref.observe(.value) { (snapshot) in
-            for item in snapshot.children {
-                
-                
-                let todoData = item as! DataSnapshot
-                
-                let itemSwD = todoData.value as! [String:Any]
-                
-                let name:String = itemSwD["name"] as! String
-                print(name)
-                let notice:String = itemSwD["notice"] as! String
-                print(notice)
-                
-                let list:Any = itemSwD["list"] as Any
-                print(list)
-                
-                let todoSwD = TodoItem(name:name, notice:notice, list:list)
-                print(todoSwD)
-                self.todoItemsSwD.append(todoSwD)
-            }
-            self.tableView.reloadData()
-        }
-    }
-    */
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         print("Hello World")
-        let listes = self.item!.list ?? AnyObject.self
-        print((listes as AnyObject).value(forKey: "name"))
         
-        //firebaseParse()
+        print(self.item?.name as String!)
+        print(self.item?.list as Any)
+        //print(todoItemsSwD.append(self.item?.list as! TodoItem))
+        
+        
     }
     
     
@@ -76,7 +51,7 @@ class SegueSwDTableViewController: UITableViewController {
         
         let todoSwD = todoItemsSwD[indexPath.row]
         cell.textLabel?.text = todoSwD.list as? String
-        
+        cell.textLabel?.text = todoSwD.name
         return cell
     }
     
