@@ -11,11 +11,11 @@ import Foundation
 class TodoItem {
     var name:String
     var notice:String
-    var list:NSAttributedStringKey
+    var list:AnyObject
     
-    init(name:String, notice:String, list:[NSAttributedStringKey : Any]?){
+    init(name:String, notice:String, list:AnyObject){
         self.name = name
         self.notice = notice
-        self.list = (list as AnyObject) as! NSAttributedStringKey
+        self.list = list
     }
 }

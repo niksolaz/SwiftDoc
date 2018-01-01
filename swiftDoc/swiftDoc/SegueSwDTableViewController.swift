@@ -13,15 +13,14 @@ import WebKit
 class SegueSwDTableViewController: UITableViewController {
     // SwiftDoc --> SwD
     var todoItemsSwD:[TodoItem] = []
-    var item:TodoItem?
+    var items:TodoItem?
     
-   
     override func viewDidLoad() {
         super.viewDidLoad()
         print("Hello World")
         
-        print(self.item?.name as String!)
-        print(self.item?.list as Any)
+        print(self.items?.name as String!)
+        print(self.items?.list as AnyObject)
         //print(todoItemsSwD.append(self.item?.list as! TodoItem))
         
         
@@ -50,7 +49,7 @@ class SegueSwDTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TodoListCell", for: indexPath)
         
         let todoSwD = todoItemsSwD[indexPath.row]
-        cell.textLabel?.text = todoSwD.list as? String
+        cell.textLabel?.text = (todoSwD.list as? NSAttributedStringKey).map { $0.rawValue }
         cell.textLabel?.text = todoSwD.name
         return cell
     }
