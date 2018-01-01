@@ -11,7 +11,6 @@ import Foundation
 class TodoItem {
     var name:String
     var notice:String
-    var list:AnyObject?
     var items: [TodoItem]?
     
     init?(json: [String:Any]?){
@@ -50,6 +49,10 @@ class TodoItem {
                 let (key, itemValue) = arg
                 
                 let item = TodoItem(json: itemValue as? [String : Any])
+                if todoItems == nil {
+                    todoItems = []
+                }
+                
                 if (item != nil) {
                     todoItems?.append(item!)
                 }

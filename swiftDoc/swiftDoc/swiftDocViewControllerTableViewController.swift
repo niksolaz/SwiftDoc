@@ -114,7 +114,7 @@ class swiftDocViewControllerTableViewController: UITableViewController {
             //let vc = segue.destination as! SegueSwDTableViewController
             if let detailVC = segue.destination as? SegueSwDTableViewController {
                 let row = tableView.indexPathForSelectedRow!.row
-                detailVC.item = todoItemsSwD[row]
+                detailVC.todoItem = todoItemsSwD[row]
             }
             
         }
