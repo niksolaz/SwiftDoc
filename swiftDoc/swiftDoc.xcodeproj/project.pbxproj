@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1FEB2B551FFA92B30083F936 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1FEB2B541FFA92B30083F936 /* GoogleService-Info.plist */; };
+		1FEB2B571FFA96E20083F936 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEB2B561FFA96E20083F936 /* DetailViewController.swift */; };
 		369C52EEDB690C88823A17CE /* Pods_swiftDoc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2644167AA1A378BD211EF1D2 /* Pods_swiftDoc.framework */; };
-		449273E61FE6B23400BD47CC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 449273E51FE6B23400BD47CC /* GoogleService-Info.plist */; };
 		449FAA861FE027A400935153 /* swiftDocViewControllerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449FAA851FE027A400935153 /* swiftDocViewControllerTableViewController.swift */; };
 		44BC3FD41FDEDADA006FDB9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BC3FD31FDEDADA006FDB9D /* AppDelegate.swift */; };
 		44BC3FD61FDEDADA006FDB9D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BC3FD51FDEDADA006FDB9D /* ViewController.swift */; };
@@ -22,8 +23,9 @@
 /* Begin PBXFileReference section */
 		16C26B92E62922C4FE4E48BE /* Pods-swiftDoc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swiftDoc.release.xcconfig"; path = "Pods/Target Support Files/Pods-swiftDoc/Pods-swiftDoc.release.xcconfig"; sourceTree = "<group>"; };
 		1896959E936940DA841BD3F1 /* Pods-swiftDoc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swiftDoc.debug.xcconfig"; path = "Pods/Target Support Files/Pods-swiftDoc/Pods-swiftDoc.debug.xcconfig"; sourceTree = "<group>"; };
+		1FEB2B541FFA92B30083F936 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		1FEB2B561FFA96E20083F936 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		2644167AA1A378BD211EF1D2 /* Pods_swiftDoc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swiftDoc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		449273E51FE6B23400BD47CC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../firebaseDownload/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		449273E71FE6B23A00BD47CC /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		449FAA851FE027A400935153 /* swiftDocViewControllerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftDocViewControllerTableViewController.swift; sourceTree = "<group>"; };
 		44BC3FD01FDEDADA006FDB9D /* swiftDoc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = swiftDoc.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -60,7 +62,7 @@
 		44BC3FC71FDEDADA006FDB9D = {
 			isa = PBXGroup;
 			children = (
-				449273E51FE6B23400BD47CC /* GoogleService-Info.plist */,
+				1FEB2B541FFA92B30083F936 /* GoogleService-Info.plist */,
 				44BC3FD21FDEDADA006FDB9D /* swiftDoc */,
 				44BC3FD11FDEDADA006FDB9D /* Products */,
 				96658F49030E5F0D745C082C /* Pods */,
@@ -89,6 +91,7 @@
 				44BC3FDA1FDEDADA006FDB9D /* Assets.xcassets */,
 				44BC3FDC1FDEDADA006FDB9D /* LaunchScreen.storyboard */,
 				44BC3FDF1FDEDADA006FDB9D /* Info.plist */,
+				1FEB2B561FFA96E20083F936 /* DetailViewController.swift */,
 			);
 			path = swiftDoc;
 			sourceTree = "<group>";
@@ -165,7 +168,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				44BC3FDE1FDEDADA006FDB9D /* LaunchScreen.storyboard in Resources */,
-				449273E61FE6B23400BD47CC /* GoogleService-Info.plist in Resources */,
+				1FEB2B551FFA92B30083F936 /* GoogleService-Info.plist in Resources */,
 				44BC3FDB1FDEDADA006FDB9D /* Assets.xcassets in Resources */,
 				44BC3FD91FDEDADA006FDB9D /* Main.storyboard in Resources */,
 			);
@@ -246,6 +249,7 @@
 				44CD719F1FF51BB0000043E0 /* SegueSwDTableViewController.swift in Sources */,
 				44BC3FD61FDEDADA006FDB9D /* ViewController.swift in Sources */,
 				449FAA861FE027A400935153 /* swiftDocViewControllerTableViewController.swift in Sources */,
+				1FEB2B571FFA96E20083F936 /* DetailViewController.swift in Sources */,
 				44E70AC21FE164B5006451A1 /* TodoItem.swift in Sources */,
 				44BC3FD41FDEDADA006FDB9D /* AppDelegate.swift in Sources */,
 			);
