@@ -13,16 +13,17 @@ import WebKit
 class SegueSwDTableViewController: UITableViewController {
     // SwiftDoc --> SwD
     var todoItemsSwD:[TodoItem] = []
-    var items:TodoItem?
+    var item:TodoItem?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         print("Hello World")
         
-        print(self.items?.name as String!)
+        print(self.item?.name as String!)
         
-        let x:AnyObject = (self.items?.list)!
-        print("result: \(x)")
+        
+        
+        
         
         
         

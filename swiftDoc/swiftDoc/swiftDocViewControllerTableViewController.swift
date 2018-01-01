@@ -24,17 +24,11 @@ class swiftDocViewControllerTableViewController: UITableViewController {
                 let todoData = item as! DataSnapshot
                 
                 let itemSwD = todoData.value as! [String:Any]
-                
-                let name:String = itemSwD["name"] as! String
-                print(name)
-                let notice:String = itemSwD["notice"] as! String
-                print(notice)
-                
-                let list:AnyObject = itemSwD["list"] as AnyObject
-                print("result: \(list)")
-                let todoSwD = TodoItem(name:name, notice:notice, list:list)
-                print(todoSwD)
-                self.todoItemsSwD.append(todoSwD)
+                let item = TodoItem(json:itemSwD) // This could be nil
+                if item != nil {
+                    self.todoItemsSwD.append(item!)
+                }
+               
             }
             self.tableView.reloadData()
         }
@@ -120,7 +114,7 @@ class swiftDocViewControllerTableViewController: UITableViewController {
             //let vc = segue.destination as! SegueSwDTableViewController
             if let detailVC = segue.destination as? SegueSwDTableViewController {
                 let row = tableView.indexPathForSelectedRow!.row
-                detailVC.items = todoItemsSwD[row]
+                detailVC.item = todoItemsSwD[row]
             }
             
         }
