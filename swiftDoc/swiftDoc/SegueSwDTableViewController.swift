@@ -17,6 +17,8 @@ class SegueSwDTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.title = self.todoItem?.name ?? ""
         self.items = todoItem?.items ?? []
     }
     
