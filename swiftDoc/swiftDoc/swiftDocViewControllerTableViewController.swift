@@ -111,9 +111,10 @@ class swiftDocViewControllerTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-        if segue.identifier == "SwDDetail" {
+        if segue.identifier == "ItemDetailSegue" {
+            //let navigationController = segue.destination as! UINavigationController
             //let vc = segue.destination as! SegueSwDTableViewController
-            if let detailVC = segue.destination as? SegueSwDTableViewController {
+            if let detailVC = segue.destination as? DetailViewController {
                 let row = tableView.indexPathForSelectedRow!.row
                 detailVC.todoItem = todoItemsSwD[row]
             }
