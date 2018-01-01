@@ -20,8 +20,10 @@ class SegueSwDTableViewController: UITableViewController {
         print("Hello World")
         
         print(self.items?.name as String!)
-        print(self.items?.list as AnyObject)
-        //print(todoItemsSwD.append(self.item?.list as! TodoItem))
+        
+        let x:AnyObject = (self.items?.list)!
+        print("result: \(x)")
+        
         
         
     }

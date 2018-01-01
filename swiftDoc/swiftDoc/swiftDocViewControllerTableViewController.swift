@@ -32,7 +32,6 @@ class swiftDocViewControllerTableViewController: UITableViewController {
                 
                 let list:AnyObject = itemSwD["list"] as AnyObject
                 print("result: \(list)")
-                
                 let todoSwD = TodoItem(name:name, notice:notice, list:list)
                 print(todoSwD)
                 self.todoItemsSwD.append(todoSwD)
