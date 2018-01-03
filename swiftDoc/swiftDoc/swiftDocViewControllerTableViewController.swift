@@ -35,7 +35,7 @@ class swiftDocViewControllerTableViewController: UITableViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Swift"
+        self.title = "Apple Developer Documentation"
        firebaseParse()
     }
 
