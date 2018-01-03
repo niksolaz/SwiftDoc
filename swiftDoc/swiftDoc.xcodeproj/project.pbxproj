@@ -10,12 +10,12 @@
 		1FEB2B551FFA92B30083F936 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1FEB2B541FFA92B30083F936 /* GoogleService-Info.plist */; };
 		1FEB2B571FFA96E20083F936 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEB2B561FFA96E20083F936 /* DetailViewController.swift */; };
 		369C52EEDB690C88823A17CE /* Pods_swiftDoc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2644167AA1A378BD211EF1D2 /* Pods_swiftDoc.framework */; };
+		446713531FFD8BD700CBF0CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44BC3FDC1FDEDADA006FDB9D /* LaunchScreen.storyboard */; };
 		449FAA861FE027A400935153 /* swiftDocViewControllerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449FAA851FE027A400935153 /* swiftDocViewControllerTableViewController.swift */; };
 		44BC3FD41FDEDADA006FDB9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BC3FD31FDEDADA006FDB9D /* AppDelegate.swift */; };
 		44BC3FD61FDEDADA006FDB9D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BC3FD51FDEDADA006FDB9D /* ViewController.swift */; };
 		44BC3FD91FDEDADA006FDB9D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44BC3FD71FDEDADA006FDB9D /* Main.storyboard */; };
 		44BC3FDB1FDEDADA006FDB9D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44BC3FDA1FDEDADA006FDB9D /* Assets.xcassets */; };
-		44BC3FDE1FDEDADA006FDB9D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44BC3FDC1FDEDADA006FDB9D /* LaunchScreen.storyboard */; };
 		44CD719F1FF51BB0000043E0 /* SegueSwDTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CD719E1FF51BB0000043E0 /* SegueSwDTableViewController.swift */; };
 		44E70AC21FE164B5006451A1 /* TodoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E70AC11FE164B5006451A1 /* TodoItem.swift */; };
 /* End PBXBuildFile section */
@@ -167,8 +167,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				44BC3FDE1FDEDADA006FDB9D /* LaunchScreen.storyboard in Resources */,
 				1FEB2B551FFA92B30083F936 /* GoogleService-Info.plist in Resources */,
+				446713531FFD8BD700CBF0CE /* LaunchScreen.storyboard in Resources */,
 				44BC3FDB1FDEDADA006FDB9D /* Assets.xcassets in Resources */,
 				44BC3FD91FDEDADA006FDB9D /* Main.storyboard in Resources */,
 			);
