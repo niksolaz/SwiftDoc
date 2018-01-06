@@ -8,7 +8,7 @@
 
 import Foundation
 //create basic Item
-class TodoItem {
+class TodoItem: Codable {
     var name:String
     var notice:String
     var items: [TodoItem]?

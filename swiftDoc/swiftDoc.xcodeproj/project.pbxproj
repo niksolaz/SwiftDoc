@@ -10,6 +10,7 @@
 		1FEB2B551FFA92B30083F936 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1FEB2B541FFA92B30083F936 /* GoogleService-Info.plist */; };
 		1FEB2B571FFA96E20083F936 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEB2B561FFA96E20083F936 /* DetailViewController.swift */; };
 		369C52EEDB690C88823A17CE /* Pods_swiftDoc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2644167AA1A378BD211EF1D2 /* Pods_swiftDoc.framework */; };
+		4412F15320012B5C001D28B7 /* DataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4412F15220012B5C001D28B7 /* DataFetcher.swift */; };
 		446713531FFD8BD700CBF0CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44BC3FDC1FDEDADA006FDB9D /* LaunchScreen.storyboard */; };
 		449FAA861FE027A400935153 /* swiftDocViewControllerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449FAA851FE027A400935153 /* swiftDocViewControllerTableViewController.swift */; };
 		44BC3FD41FDEDADA006FDB9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BC3FD31FDEDADA006FDB9D /* AppDelegate.swift */; };
@@ -26,6 +27,7 @@
 		1FEB2B541FFA92B30083F936 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1FEB2B561FFA96E20083F936 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		2644167AA1A378BD211EF1D2 /* Pods_swiftDoc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swiftDoc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4412F15220012B5C001D28B7 /* DataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFetcher.swift; sourceTree = "<group>"; };
 		449273E71FE6B23A00BD47CC /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		449FAA851FE027A400935153 /* swiftDocViewControllerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftDocViewControllerTableViewController.swift; sourceTree = "<group>"; };
 		44BC3FD01FDEDADA006FDB9D /* swiftDoc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = swiftDoc.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -59,6 +61,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		4412F15120012B46001D28B7 /* DataFetcher */ = {
+			isa = PBXGroup;
+			children = (
+				4412F15220012B5C001D28B7 /* DataFetcher.swift */,
+			);
+			path = DataFetcher;
+			sourceTree = "<group>";
+		};
 		44BC3FC71FDEDADA006FDB9D = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +91,7 @@
 		44BC3FD21FDEDADA006FDB9D /* swiftDoc */ = {
 			isa = PBXGroup;
 			children = (
+				4412F15120012B46001D28B7 /* DataFetcher */,
 				44BC3FD31FDEDADA006FDB9D /* AppDelegate.swift */,
 				449273E71FE6B23A00BD47CC /* GoogleService-Info.plist */,
 				44BC3FD51FDEDADA006FDB9D /* ViewController.swift */,
@@ -204,6 +215,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-swiftDoc/Pods-swiftDoc-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Cache/Cache.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
@@ -211,6 +223,7 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cache.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
@@ -248,6 +261,7 @@
 			files = (
 				44CD719F1FF51BB0000043E0 /* SegueSwDTableViewController.swift in Sources */,
 				44BC3FD61FDEDADA006FDB9D /* ViewController.swift in Sources */,
+				4412F15320012B5C001D28B7 /* DataFetcher.swift in Sources */,
 				449FAA861FE027A400935153 /* swiftDocViewControllerTableViewController.swift in Sources */,
 				1FEB2B571FFA96E20083F936 /* DetailViewController.swift in Sources */,
 				44E70AC21FE164B5006451A1 /* TodoItem.swift in Sources */,
