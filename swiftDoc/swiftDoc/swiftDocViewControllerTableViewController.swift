@@ -15,6 +15,14 @@ class swiftDocViewControllerTableViewController: UITableViewController {
     var todoItemsSwD:[TodoItem] = []
     
     let ref: DatabaseReference =  Database.database().reference().child("todolistSwift")
+    func retrieveData(){
+        let dataFetcher = DataFetcher()
+        dataFetcher.retrieveData { (result: [TodoItem]) in
+            self.todoItemsSwD = result
+            self.tableView.reloadData()
+        }
+    }
+    
     func firebaseParse() {
         
         ref.observe(.value) { (snapshot) in
@@ -36,7 +44,7 @@ class swiftDocViewControllerTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Apple Developer Documentation"
-       firebaseParse()
+        self.retrieveData()
     }
 
     override func didReceiveMemoryWarning() {

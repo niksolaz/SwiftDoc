@@ -42,7 +42,6 @@ class DataFetcher: NSObject{
             totalCostLimit: 0
         )
         
-        
         do{
             internalStorage = try! Storage(diskConfig: diskConfig, memoryConfig: memoryConfig)
         }catch {
@@ -50,9 +49,12 @@ class DataFetcher: NSObject{
         }
     }
     
-    func retrieveDataOnline(completionDataOnline: @escaping (_ result: [TodoItem]) -> Void){
-        let hasOnlineData = try? self.internalStorage.existsObject(ofType: String.self, forKey: self.swiftDataOnlineKey)
-        if (hasOnlineData == nil){
+    func retrieveData(completionDataOnline: @escaping (_ result: [TodoItem]) -> Void){
+        let hasOnlineData = try? self.internalStorage.existsObject(ofType: [TodoItem].self, forKey: self.swiftDataOnlineKey)
+        if (hasOnlineData == true){
+            let result = try? self.internalStorage.object(ofType: [TodoItem].self, forKey: self.swiftDataOnlineKey)
+            completionDataOnline(result!)
+        }else{
             self.firebaseParse(completion: { (result:[TodoItem]) in
                 try? self.internalStorage.setObject(result, forKey: self.swiftDataOnlineKey)
                 completionDataOnline(result)
@@ -62,6 +64,32 @@ class DataFetcher: NSObject{
     
     func retrieveDataOffline(completionDataOffline: @escaping (_ result: [TodoItem])->Void){
         var todoItems:[TodoItem] = []
+        
+        if let path = Bundle.main.path(forResource: "swiftdoc-offline", ofType: "json") {
+            do {
+                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+                var json = try JSONSerialization.jsonObject(with: data)
+                guard let mainItem = json as? [String: Any],
+                    let mainList = mainItem["todolistSwift"] as? [String: Any] else {
+                    print("Error!!!")
+                    return
+                }
+                
+                // Sort the json list. JSONSerialization could return data that it is not sorted correctly.
+                var sortedList = mainList.sorted(by: { $0.0 < $1.0 })
+                
+                sortedList.forEach({ (key, value) in
+                    // For each item, create a new TodoItem
+                    var item = value as? [String: Any]
+                    var todoItem: TodoItem = TodoItem(json: item)!
+                    todoItems.append(todoItem)
+                })
+                
+            } catch {
+                // handle error
+            }
+        }
+        // Send the data to the completion handler
         completionDataOffline(todoItems)
     }
     
@@ -92,23 +120,19 @@ class DataFetcher: NSObject{
                 })
             }
         }
-        
     }
     
     func checkIfConnectedToFirebase(completion: @escaping (_ result:Bool) -> Void) {
         var result: Bool = false
         let connectedRef = Database.database().reference(withPath: "todolistSwift")
         connectedRef.observe(.value, with: { snapshot in
-            if snapshot.value as? Bool ?? false {
+            if ((snapshot.value as? [String: Any] ?? nil) != nil) {
                 result = true
             } else {
                 result = false
             }
             completion(result)
         })
-        
-        
-        
     }
     
     

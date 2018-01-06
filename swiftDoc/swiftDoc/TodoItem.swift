@@ -8,9 +8,15 @@
 
 import Foundation
 //create basic Item
+class TodoItemOffline: Codable{
+    var name:String?
+    var notice:String?
+    var items: [TodoItemOffline]?
+}
+
 class TodoItem: Codable {
-    var name:String
-    var notice:String
+    var name:String?
+    var notice:String?
     var items: [TodoItem]?
     
     init?(json: [String:Any]?){
@@ -64,4 +70,8 @@ class TodoItem: Codable {
         return todoItems
         
     }
+}
+
+struct SwiftDocOfflineData: Codable{
+    var todolistSwift: [String:[String: TodoItemOffline]]
 }
