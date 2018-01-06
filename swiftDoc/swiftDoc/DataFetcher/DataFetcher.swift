@@ -50,9 +50,9 @@ class DataFetcher: NSObject{
         }
     }
     
-    func retrieveDataOnline(completionDataOnline: (result: [TodoItem] -> Void)){
-        let hasOnlineData = try? storage.existsObject(ofType: String.self, forKey: self.swiftDataOnlineKey)
-        if (!hasOnlineData){
+    func retrieveDataOnline(completionDataOnline: @escaping (_ result: [TodoItem]) -> Void){
+        let hasOnlineData = try? self.internalStorage.existsObject(ofType: String.self, forKey: self.swiftDataOnlineKey)
+        if (hasOnlineData == nil){
             self.firebaseParse(completion: { (result:[TodoItem]) in
                 try? self.internalStorage.setObject(result, forKey: self.swiftDataOnlineKey)
                 completionDataOnline(result)
@@ -60,7 +60,7 @@ class DataFetcher: NSObject{
         }
     }
     
-    func retrieveDataOffline(completionDataOffline: @escaping (_ result: [TodoItem] -> Void)){
+    func retrieveDataOffline(completionDataOffline: @escaping (_ result: [TodoItem])->Void){
         var todoItems:[TodoItem] = []
         completionDataOffline(todoItems)
     }
@@ -71,7 +71,7 @@ class DataFetcher: NSObject{
         checkIfConnectedToFirebase { (isConnected: Bool) in
             if(isConnected){
                 var todoItems:[TodoItem] = []
-                ref.observe(.value) { (snapshot) in
+                self.ref.observe(.value) { (snapshot) in
                     for item in snapshot.children {
                         
                         
@@ -87,7 +87,7 @@ class DataFetcher: NSObject{
                     completion(todoItems)
                 }
             }else{ // It is not connected.
-                retrieveDataOffline(completionDataOffline: { (offlineData:[TodoItem]) in
+                self.retrieveDataOffline(completionDataOffline: { (offlineData:[TodoItem]) in
                     completion(offlineData)
                 })
             }
