@@ -1,0 +1,329 @@
+{
+  "todolistSwift" : {
+    "1 Entry" : {
+      "name" : "Apple Developer Documentation",
+      "notice" : "Browse the latest developer documentation including API reference, articles, and sample code."
+    },
+    "2 App Services" : {
+      "name" : "App Services",
+      "notice" : "in arrivo prossimamente"
+    },
+    "3 App Frameworks" : {
+      "items" : {
+        "AppKit" : {
+          "items" : {
+            "Accessibility" : {
+              "items" : {
+                "AppKit Elements" : {
+                  "items" : {
+                    "NSAccessibilityAnnotationAttributeKey" : {
+                      "name" : "NSAccessibilityAnnotationAttributeKey",
+                      "notice" : "Nessuna descrizione disponibile."
+                    },
+                    "NSAccessibilityButton" : {
+                      "name" : "NSAccessibilityButton",
+                      "notice" : "Un protocollo basato su ruolo che dichiara l'interfaccia minima necessaria per un elemento di accessibilità di agire come un pulsante."
+                    },
+                    "NSAccessibilityCheckBox" : {
+                      "name" : "NSAccessibilityCheckBox",
+                      "notice" : "Un protocollo basato su ruolo che dichiara l'interfaccia minima necessaria agire come una casella di controllo elemento di accessibilità."
+                    },
+                    "NSAccessibilityElementLoading" : {
+                      "name" : "NSAccessibilityElementLoading",
+                      "notice" : "Nessuna descrizione disponibile."
+                    },
+                    "NSAccessibilityElementProtocol" : {
+                      "name" : "NSAccessibilityElementProtocol",
+                      "notice" : "Un protocollo basato su ruolo che dichiara l'interfaccia minima necessaria per interagire con un client di accessibilità."
+                    },
+                    "NSAccessibilityImage" : {
+                      "name" : "NSAccessibilityImage",
+                      "notice" : "Un protocollo basato su ruolo che dichiara l'interfaccia minima necessaria per un elemento di accessibilità di agire come un'immagine."
+                    },
+                    "NSAccessibilityList" : {
+                      "name" : "NSAccessibilityList",
+                      "notice" : "Un protocollo basato su ruolo che dichiara l'interfaccia minima necessaria agire come una visualizzazione elenco elemento accessibilità."
+                    },
+                    "NSAccessibilityNavigableStaticText" : {
+                      "name" : "NSAccessibilityNavigableStaticText",
+                      "notice" : "Un protocollo basato su ruolo che dichiara l'interfaccia minima necessaria per un elemento di accessibilità ad agire come testo statico navigabile."
+                    },
+                    "NSAccessibilityOutline" : {
+                      "name" : "NSAccessibilityOutline",
+                      "notice" : "Un protocollo basato su ruolo che dichiara l'interfaccia minima necessaria per un elemento di accessibilità ad agire come una visualizzazione della struttura."
+                    },
+                    "NSAccessibilityProgressIndicator" : {
+                      "name" : "NSAccessibilityProgressIndicator",
+                      "notice" : "Un protocollo basato su ruolo che dichiara l'interfaccia minima necessaria per un elemento di accessibilità di agire come un indicatore di avanzamento."
+                    },
+                    "NSAccessibilityRadioButton" : {
+                      "name" : "NSAccessibilityRadioButton",
+                      "notice" : "Un protocollo basato su ruolo che dichiara l'interfaccia minima necessaria per un elemento di accessibilità di agire come un pulsante di opzione."
+                    },
+                    "NSAccessibilityRow" : {
+                      "name" : "NSAccessibilityRow",
+                      "notice" : "Un protocollo basato su ruolo che dichiara l'interfaccia minima necessaria per un elemento di accessibilità ad agire come una riga per una tabella, un elenco o una visualizzazione struttura."
+                    },
+                    "NSAccessibilitySlider" : {
+                      "name" : "NSAccessibilitySlider",
+                      "notice" : "Un protocollo basato su ruolo che dichiara l'interfaccia minima necessaria per un elemento di accessibilità di agire come un dispositivo di scorrimento."
+                    },
+                    "NSAccessibilityStaticText" : {
+                      "name" : "NSAccessibilityStaticText",
+                      "notice" : "Un protocollo basato su ruolo che dichiara l'interfaccia minima necessaria per un elemento di accessibilità ad agire come testo statico."
+                    },
+                    "NSAccessibilityStepper" : {
+                      "name" : "NSAccessibilityStepper",
+                      "notice" : "Un protocollo basato su ruolo che dichiara l'interfaccia minima necessaria per un elemento di accessibilità di agire come uno stepper."
+                    },
+                    "NSAccessibilitySwitch" : {
+                      "name" : "NSAccessibilitySwitch",
+                      "notice" : "Un protocollo basato su ruolo che dichiara l'interfaccia minima necessaria per un elemento di accessibilità di agire come un interruttore."
+                    },
+                    "NSAccessibilityTable" : {
+                      "name" : "NSAccessibilityTable",
+                      "notice" : "Un protocollo basato su ruolo che dichiara l'interfaccia minima necessaria per un elemento di accessibilità ad agire come una visualizzazione per tabella."
+                    },
+                    "name" : "App Kit Elements",
+                    "notice" : "Protocolli AppKit Elements"
+                  },
+                  "name" : "AppKit Elements",
+                  "notice" : "Protocolli "
+                },
+                "Convenience Functions" : {
+                  "items" : {
+                    "Description" : {
+                      "name" : "var description: String?",
+                      "notice" : "Restituisce una descrizione standard per un'azione."
+                    },
+                    "FuncDescription" : {
+                      "name" : "func description(with: NSAccessibilitySubrole?)",
+                      "notice" : "Restituisce una descrizione standard per un ruolo e sotto regole."
+                    },
+                    "NSAccessibilityFrameInView" : {
+                      "name" : "func NSAccessibilityFrameInView(NSView, NSRect)",
+                      "notice" : "Restituisce il frame nelle coordinate dello schermo."
+                    },
+                    "NSAccessibilityPointInView" : {
+                      "name" : "func NSAccessibilityPointInView(NSView, NSPoint)",
+                      "notice" : "Restituisce il punto nelle coordinate dello schermo."
+                    },
+                    "NSAccessibilityPostNotification" : {
+                      "name" : "func NSAccessibilityPostNotification(Any, NSAccessibilityNotificationName)",
+                      "notice" : "Invia una notifica a qualsiasi applicazione assistiva di osservazione."
+                    },
+                    "NSAccessibilityPostNotificationWithUserInfo" : {
+                      "name" : "func NSAccessibilityPostNotificationWithUserInfo(Any, NSAccessibilityNotificationName, [NSAccessibilityNotificationUserInfoKey : Any])",
+                      "notice" : "Invia una notifica e un dizionario opzionale a qualsiasi applicazione assistiva di osservazione.userInfo"
+                    },
+                    "NSAccessibilitySetMayContainProtectedContent" : {
+                      "name" : "func NSAccessibilitySetMayContainProtectedContent(Bool)",
+                      "notice" : "Imposta se l'app può avere contenuto protetto."
+                    },
+                    "NSAccessibilityUnignoredAncestor" : {
+                      "name" : "func NSAccessibilityUnignoredAncestor(Any)",
+                      "notice" : "Restituisce un oggetto di accessibilità non identificato, se necessario ascendente la gerarchia."
+                    },
+                    "NSAccessibilityUnignoredChildren" : {
+                      "nome" : "func NSAccessibilityUnignoredChildren([Any])",
+                      "notice" : "Restituisce un elenco di oggetti di accessibilità non identificati, se necessario, decrescente della gerarchia."
+                    },
+                    "NSAccessibilityUnignoredChildrenForOnlyChild" : {
+                      "name" : "func NSAccessibilityUnignoredChildrenForOnlyChild(Any)",
+                      "notice" : "Restituisce un elenco di oggetti di accessibilità non identificati, se necessario, decrescente della gerarchia."
+                    },
+                    "NSAccessibilityUnignoredDescendant" : {
+                      "name" : "func NSAccessibilityUnignoredDescendant(Any)",
+                      "notice" : "Restituisce un oggetto di accessibilità non identificato, se necessario, decrescente della gerarchia."
+                    },
+                    "StaticFuncDescription" : {
+                      "name" : "static func description(for: Any)",
+                      "notice" : "Restituisce una descrizione del ruolo standard per un elemento dell'interfaccia utente."
+                    },
+                    "notice" : "funzioni di Convenience Functions"
+                  },
+                  "name" : "Convenience Functions",
+                  "notice" : "Variabili e Funzioni"
+                },
+                "Custom Elements" : {
+                  "items" : {
+                    "NSAccessibilityCustomAction" : {
+                      "name" : "NSAccessibilityCustomAction",
+                      "notice" : "Consultare il sito Apple developer all'indirizzo: https://developer.apple.com/documentation/appkit/NSAccessibilityCustomAction"
+                    },
+                    "NSAccessibilityCustomRotor" : {
+                      "name" : "NSAccessibilityCustomRotor",
+                      "notice" : "Consultare il sito Apple developer all'indirizzo: https://developer.apple.com/documentation/appkit/NSAccessibilityCustomRotor"
+                    },
+                    "NSAccessibilityCustomRotorItemResult" : {
+                      "name" : "NSAccessibilityCustomRotor.ItemResult",
+                      "notice" : "Consultare il sito Apple developer all'indirizzo: https://developer.apple.com/documentation/appkit/NSAccessibilityCustomRotor.ItemResult"
+                    },
+                    "NSAccessibilityCustomRotorItemSearchDelegate" : {
+                      "name" : "NSAccessibilityCustomRotorItemSearchDelegate",
+                      "notice" : "Consultare il sito Apple developer all'indirizzo: https://developer.apple.com/documentation/appkit/NSAccessibilityCustomRotorItemSearchDelegate"
+                    },
+                    "NSAccessibilityCustomRotorSearchParameters" : {
+                      "name" : "NSAccessibilityCustomRotor.SearchParameters",
+                      "notice" : "Consultare il sito Apple developer all'indirizzo: https://developer.apple.com/documentation/appkit/nsaccessibilitycustomrotor.searchparameters"
+                    },
+                    "NSAccessibilityElement" : {
+                      "name" : "NSAccessibilityElement",
+                      "notice" : "L'infrastruttura di base necessaria per interagire con un client di accessibilità."
+                    },
+                    "NSAccessibilityGroup" : {
+                      "name" : "NSAccessibilityGroup",
+                      "notice" : "Un protocollo basato sui ruoli che dichiara l'interfaccia minima necessaria per fungere da contenitore per altri elementi dell'interfaccia utente."
+                    },
+                    "NSAccessibilityLayoutArea" : {
+                      "name" : "NSAccessibilityLayoutArea",
+                      "notice" : "Un protocollo basato sui ruoli che dichiara l'interfaccia minima richiesta per un elemento di accessibilità come area di layout."
+                    },
+                    "NSAccessibilityLayoutItem" : {
+                      "name" : "NSAccessibilityLayoutItem",
+                      "notice" : "Un protocollo basato sui ruoli che dichiara l'interfaccia minima richiesta per un elemento di accessibilità come elemento di layout."
+                    },
+                    "notice" : "Classi e Protocolli Custom Elements"
+                  },
+                  "name" : "Custom Elements",
+                  "notice" : "Protocolli e Classi"
+                },
+                "Deprecated" : {
+                  "items" : {
+                    "NSAccessibility" : {
+                      "name" : "NSAccessibility",
+                      "notice" : "Il protocollo informale di NSAccessibility definisce un'API basata su chiave, vecchia. Per la maggior parte, è sconsigliato l'uso di questa API. Utilizzare invece l'API di nuova, basata sul metodo. Tuttavia, esistono alcuni metodi e proprietà che sono ancora rilevanti. È possibile combinare la accessibilityHitTest(_:)  Metodo e il accessibilityFocusedUIElement  e accessibilityNotifiesWhenDestroyed  Proprietà con il nuovo NSAccessibility  protocollo. Per ulteriori informazioni sull'API nuova, basata sul metodo, vedere Guida di programmazione di accessibilità per OS X o NSAccessibility ."
+                    },
+                    "notice" : "Deprecato"
+                  },
+                  "name" : "Deprecated",
+                  "notice" : "Deprecato"
+                },
+                "First Steps" : {
+                  "items" : {
+                    "NSAccessibility" : {
+                      "name" : "NSAccessibility",
+                      "notice" : "L'elenco completo di proprietà e metodi implementati da elementi accessibili."
+                    },
+                    "NSAccessibilityContainsTransientUI" : {
+                      "name" : "NSAccessibilityContainsTransientUI",
+                      "notice" : "Un insieme di metodi che supportano l'accessibilità in un'interfaccia utente che cambia in modo dinamico, in genere in risposta a eventi di passaggio del mouse."
+                    },
+                    "notice" : "NSAccessibility"
+                  },
+                  "name" : "First Steps",
+                  "notice" : "Protocolli"
+                }
+              },
+              "name" : "Accessibility",
+              "notice" : "Crea un'app più accessibile agli utenti con disabilità."
+            },
+            "Animation" : {
+              "items" : {
+                "Custom Animations" : {
+                  "name" : "Custom Animations",
+                  "notice" : "Custom Animations"
+                },
+                "Presentations" : {
+                  "name" : "Presentations",
+                  "notice" : "Presentations"
+                },
+                "User Interface" : {
+                  "name" : "User Interface",
+                  "notice" : "User Interface"
+                },
+                "View-Based Animations" : {
+                  "name" : "View-Based Animations",
+                  "notice" : "View-Based Animations"
+                },
+                "notice" : "Animation"
+              },
+              "name" : "Animation",
+              "notice" : "Animare le visualizzazioni e altri contenuti per creare un'esperienza più coinvolgente per gli utenti."
+            },
+            "Core App" : {
+              "name" : "Core App",
+              "notice" : "Conoscere gli oggetti che si utilizzano per interagire con il sistema."
+            },
+            "Data Management" : {
+              "name " : "Data Management",
+              "notice" : "Gestire i dati dell'app tramite l'accesso ai file e le associazioni di cacao."
+            },
+            "Drag and Drop" : {
+              "name " : "Drag and Drop",
+              "notice" : "Supportare la manipolazione diretta del contenuto della tua app usando il drag e drop."
+            },
+            "Menus, Cursors, and the Dock" : {
+              "name" : "Menus, Cursors, and the Dock",
+              "notice" : "Implementare i menu e i cursori per facilitare le interazioni con l'app e utilizzare il riquadro dell'app Dock per trasmettere informazioni aggiornate."
+            },
+            "Resource Management" : {
+              "name" : "Resource Management",
+              "notice" : "Gestire i file di pennino contenente l'interfaccia utente dell'app e gli storyboard e imparare a caricare i dati archiviati nei file di risorse."
+            },
+            "Sound, Speech, and Haptics" : {
+              "name" : "Sound, Speech, and Haptics",
+              "notice" : "Riproduci suoni e feedback tattile e incorpora il riconoscimento vocale e la sintesi nell'interfaccia."
+            },
+            "Touch Bar" : {
+              "name" : "Touch Bar",
+              "notice" : "Visualizzare contenuti interattivi e controlli nella barra del tocco."
+            },
+            "View and Controls" : {
+              "name" : "View and Controls",
+              "notice" : "Presentare e definire le interazioni per il contenuto sullo schermo."
+            },
+            "Windows,Panels,and Screens" : {
+              "name" : "Windows,Panels,and Screens",
+              "notice" : "Organizzare le vostre gerarchie di visualizzazione e facilitare la loro visualizzazione sullo schermo"
+            }
+          },
+          "name" : "AppKit",
+          "notice" : "AppKit contiene tutti gli oggetti necessari per implementare l'interfaccia utente per un'app macOS: finestre, pannelli, pulsanti, menu, pergamene e campi di testo, e gestisce tutti i dettagli per te mentre disegna in modo efficiente sullo schermo, comunica con l'hardware dispositivi e buffer dello schermo, cancella le aree dello schermo prima di disegnare e ritaglia le viste.  Il framework fornisce anche le API che usi per rendere la tua app accessibile agli utenti con disabilità (vedi Accessibilità ); per ulteriori informazioni sulla localizzazione della tua app per lingue, paesi o regioni culturali diverse, consulta la Guida all'internazionalizzazione e alla localizzazione ."
+        },
+        "Foundation" : {
+          "name" : "Foundation",
+          "notice" : "Il framework Foundation fornisce un livello base di funzionalità per app e framework, tra cui archiviazione e persistenza dei dati, elaborazione del testo, calcoli di data e ora, ordinamento e filtraggio e networking. Le classi, i protocolli e i tipi di dati definiti da Foundation vengono utilizzati in tutti gli SDK macOS, iOS, watchOS e tvOS."
+        },
+        "Objective-C" : {
+          "name" : "Objective-C",
+          "notice" : "Le  API del modulo Objective-C definiscono la base del linguaggio Objective-C. Queste API includono:  Tipi come la NSObjectclasse e il protocollo che forniscono la funzionalità di root della maggior parte delle classi Objective-CNSObjectProtocol  Funzioni e strutture dati che comprendono il runtime Objective-C, che fornisce supporto per le proprietà dinamiche del linguaggio Objective-C  In genere non è necessario utilizzare questo modulo direttamente."
+        },
+        "Swift Standard Library" : {
+          "name" : "Swift Standard Library",
+          "notice" : "La libreria standard Swift definisce un livello base di funzionalità per scrivere programmi Swift, tra cui:  Fondamentali tipi di dati, come Int, DoubleeString  Strutture di dati comuni come Array, DictionaryeSet  Funzioni globali come eprint(_:separator:terminator:)abs(_:)  Protocolli come Collectione Equatableche descrivono le astrazioni comuni.  Protocolli come e che si utilizzano per personalizzare le operazioni disponibili per tutti i tipi.CustomDebugStringConvertibleCustomReflectable  Protocolli, ad esempio , che si utilizzano per fornire implementazioni che altrimenti richiederebbero codice di codice di installazione.OptionSet"
+        },
+        "UIKit" : {
+          "name" : "UIKit",
+          "notice" : "Il framework UIKit fornisce l'infrastruttura necessaria per le tue app iOS o tvOS. Fornisce la finestra e visualizza l'architettura per l'implementazione dell'interfaccia, l'infrastruttura di gestione degli eventi per la distribuzione di Multitouch e altri tipi di input alla tua app e il ciclo di esecuzione principale necessario per gestire le interazioni tra l'utente, il sistema e la tua app. Altre funzionalità offerte dal framework includono supporto per l'animazione, supporto dei documenti, supporto per il disegno e la stampa, informazioni sul dispositivo corrente, gestione e visualizzazione del testo, supporto per la ricerca, supporto per l'accessibilità, supporto per l'estensione delle app e gestione delle risorse."
+        },
+        "WatchKit" : {
+          "name" : "WatchKit",
+          "notice" : "Il framework WatchKit contiene le classi utilizzate da un'estensione WatchKit per manipolare l'interfaccia di un'app watchOS. Un'app watchOS contiene uno o più controller di interfaccia, ognuno dei quali può avere tabelle, pulsanti, cursori e altri tipi di elementi visivi. L'estensione WatchKit utilizza le classi di questo framework per configurare quegli elementi visivi e per rispondere alle interazioni dell'utente."
+        }
+      },
+      "name" : "App Frameworks",
+      "notice" : "Documentazione Librerie App Frameworks"
+    },
+    "4 Developer Tools" : {
+      "name" : "Developer Tools",
+      "notice" : "in arrivo prossimamente"
+    },
+    "5 Graphics and Games" : {
+      "name" : "Graphics and Games",
+      "notice" : "in arrivo prossimamente"
+    },
+    "6 Media and Web" : {
+      "name" : "Media and Web",
+      "notice" : "in arrivo prossimamente"
+    },
+    "7 System" : {
+      "name" : "System",
+      "notice" : "in arrivo prossimamente"
+    },
+    "8 Info" : {
+      "name" : "Info Sviluppatore",
+      "notice" : "Sviluppato da Nicola Solazzo. Github contact : https://github.com/niksolaz"
+    }
+  }
+}
