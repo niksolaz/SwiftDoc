@@ -7,12 +7,6 @@
 //
 
 import Foundation
-//create basic Item
-class TodoItemOffline: Codable{
-    var name:String?
-    var notice:String?
-    var items: [TodoItemOffline]?
-}
 
 class TodoItem: Codable {
     var name:String?
@@ -72,6 +66,3 @@ class TodoItem: Codable {
     }
 }
 
-struct SwiftDocOfflineData: Codable{
-    var todolistSwift: [String:[String: TodoItemOffline]]
-}
