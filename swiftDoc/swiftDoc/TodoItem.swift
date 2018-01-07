@@ -7,10 +7,10 @@
 //
 
 import Foundation
-//create basic Item
-class TodoItem {
-    var name:String
-    var notice:String
+
+class TodoItem: Codable {
+    var name:String?
+    var notice:String?
     var items: [TodoItem]?
     
     init?(json: [String:Any]?){
@@ -65,3 +65,4 @@ class TodoItem {
         
     }
 }
+

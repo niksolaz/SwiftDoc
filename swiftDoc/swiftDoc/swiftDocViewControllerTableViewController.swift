@@ -7,36 +7,24 @@
 //
 
 import UIKit
-import Firebase
 import WebKit
 
 class swiftDocViewControllerTableViewController: UITableViewController {
     // SwiftDoc --> SwD
     var todoItemsSwD:[TodoItem] = []
     
-    let ref: DatabaseReference =  Database.database().reference().child("todolistSwift")
-    func firebaseParse() {
-        
-        ref.observe(.value) { (snapshot) in
-            for item in snapshot.children {
-                
-               
-                let todoData = item as! DataSnapshot
-                
-                let itemSwD = todoData.value as! [String:Any]
-                let item = TodoItem(json:itemSwD) // This could be nil
-                if item != nil {
-                    self.todoItemsSwD.append(item!)
-                }
-               
-            }
+    func retrieveData(){
+        let dataFetcher = DataFetcher()
+        dataFetcher.retrieveData { (result: [TodoItem]) in
+            self.todoItemsSwD = result
             self.tableView.reloadData()
         }
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Apple Developer Documentation"
-       firebaseParse()
+        self.retrieveData()
     }
 
     override func didReceiveMemoryWarning() {
