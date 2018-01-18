@@ -6,6 +6,7 @@
 //  Copyright © 2017 Nicola Solazzo. All rights reserved.
 //
 //Not aviable
+//........
 import UIKit
 import Firebase
 import WebKit
