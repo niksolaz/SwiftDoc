@@ -5,7 +5,7 @@
 //  Created by Nicola Solazzo on 28/12/17.
 //  Copyright © 2017 Nicola Solazzo. All rights reserved.
 //
-
+//Not aviable
 import UIKit
 import Firebase
 import WebKit
