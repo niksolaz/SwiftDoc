@@ -13,6 +13,7 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
     @IBOutlet weak var itemName: UILabel!
     @IBOutlet weak var itemNotice: UILabel!
     @IBOutlet weak var iitemTopics: UITableView!
+    @IBOutlet weak var itemScrollView: UIScrollView!
     var todoItem:TodoItem?
     var items: [TodoItem] = []
     
@@ -23,7 +24,7 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
         self.items = todoItem?.items ?? []
         self.itemName.text = self.todoItem?.name
         self.itemNotice.text = self.todoItem?.notice
-        
+        self.scrollViewText()
         self.checkIfYouHaveItems()
     }
     
@@ -39,7 +40,13 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
         }
     }
    
-
+    func scrollViewText(){
+        if(self.itemScrollView.isPagingEnabled == true){
+            self.itemNotice.isEnabled = true
+        }else{
+            self.itemNotice.isEnabled = false
+        }
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
