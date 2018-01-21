@@ -11,8 +11,10 @@ import UIKit
 class DetailViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var itemName: UILabel!
+    @IBOutlet weak var itemScrollView: UIScrollView!
     @IBOutlet weak var itemNotice: UILabel!
     @IBOutlet weak var iitemTopics: UITableView!
+    
     var todoItem:TodoItem?
     var items: [TodoItem] = []
     
@@ -23,7 +25,7 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
         self.items = todoItem?.items ?? []
         self.itemName.text = self.todoItem?.name
         self.itemNotice.text = self.todoItem?.notice
-        
+        itemScrollView.contentLayoutGuide.bottomAnchor.constraint(equalTo: itemNotice.bottomAnchor).isActive = true
         self.checkIfYouHaveItems()
     }
     

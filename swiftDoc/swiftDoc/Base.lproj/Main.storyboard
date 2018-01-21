@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -101,21 +102,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="itemName" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dXG-Kd-kPw">
-                                <rect key="frame" x="16" y="80" width="343" height="20.5"/>
-                                <color key="backgroundColor" red="0.0" green="0.55685518609999995" blue="0.64810297910000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="itemNotice" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zVN-pE-npe">
-                                <rect key="frame" x="16" y="108.5" width="343" height="20.5"/>
+                                <rect key="frame" x="16" y="80" width="343" height="21"/>
                                 <color key="backgroundColor" red="0.0" green="0.55685518609999995" blue="0.64810297910000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fvz-vn-EAm">
-                                <rect key="frame" x="16" y="153" width="343" height="494"/>
+                                <rect key="frame" x="16" y="222" width="343" height="425"/>
                                 <color key="backgroundColor" red="0.0" green="0.55685518609999995" blue="0.64810297910000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="separatorColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
@@ -148,19 +142,42 @@
                                     <outlet property="delegate" destination="nvS-CX-uoa" id="OWg-jg-oAe"/>
                                 </connections>
                             </tableView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zAh-Db-070" userLabel="Item ScrollView">
+                                <rect key="frame" x="0.0" y="100" width="375" height="114"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="itemNotice" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zVN-pE-npe">
+                                        <rect key="frame" x="8" y="8" width="343" height="21"/>
+                                        <color key="backgroundColor" red="0.0" green="0.55685518609999995" blue="0.64810297910000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="343" id="KCe-fw-l5h"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="zVN-pE-npe" firstAttribute="leading" secondItem="zAh-Db-070" secondAttribute="leadingMargin" id="FF2-ay-Omp"/>
+                                    <constraint firstItem="zVN-pE-npe" firstAttribute="top" secondItem="zAh-Db-070" secondAttribute="topMargin" id="PXA-RG-FQS"/>
+                                    <constraint firstAttribute="bottom" secondItem="zVN-pE-npe" secondAttribute="bottom" constant="85" placeholder="YES" id="Swy-fE-4Ue"/>
+                                    <constraint firstAttribute="trailing" secondItem="zVN-pE-npe" secondAttribute="trailing" constant="24" id="gvD-W2-Y5s"/>
+                                </constraints>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.55685518609999995" blue="0.64810297910000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="QBi-85-tia" firstAttribute="trailing" secondItem="zAh-Db-070" secondAttribute="trailing" id="34t-dd-1DS"/>
                             <constraint firstItem="dXG-Kd-kPw" firstAttribute="top" secondItem="QBi-85-tia" secondAttribute="top" constant="16" id="6q3-lC-e3s"/>
                             <constraint firstItem="fvz-vn-EAm" firstAttribute="leading" secondItem="QBi-85-tia" secondAttribute="leading" constant="16" id="AIC-4T-kJc"/>
+                            <constraint firstItem="zAh-Db-070" firstAttribute="width" secondItem="K4V-wX-Gjm" secondAttribute="width" id="Kv7-BU-DKv"/>
                             <constraint firstItem="dXG-Kd-kPw" firstAttribute="leading" secondItem="QBi-85-tia" secondAttribute="leading" constant="16" id="NFd-JB-cH1"/>
                             <constraint firstItem="QBi-85-tia" firstAttribute="trailing" secondItem="fvz-vn-EAm" secondAttribute="trailing" constant="16" id="Qy6-f9-Thp"/>
-                            <constraint firstItem="zVN-pE-npe" firstAttribute="top" secondItem="dXG-Kd-kPw" secondAttribute="bottom" constant="8" id="RUJ-Fk-a2o"/>
-                            <constraint firstItem="fvz-vn-EAm" firstAttribute="top" secondItem="zVN-pE-npe" secondAttribute="bottom" constant="24" id="V2M-PJ-4wR"/>
-                            <constraint firstItem="zVN-pE-npe" firstAttribute="leading" secondItem="QBi-85-tia" secondAttribute="leading" constant="16" id="V6v-Gt-h0Z"/>
                             <constraint firstItem="QBi-85-tia" firstAttribute="trailing" secondItem="dXG-Kd-kPw" secondAttribute="trailing" constant="16" id="Wb4-lt-2JV"/>
-                            <constraint firstItem="QBi-85-tia" firstAttribute="trailing" secondItem="zVN-pE-npe" secondAttribute="trailing" constant="16" id="e7V-TU-D0v"/>
                             <constraint firstItem="QBi-85-tia" firstAttribute="bottom" secondItem="fvz-vn-EAm" secondAttribute="bottom" constant="20" id="ira-mP-utR"/>
+                            <constraint firstItem="zAh-Db-070" firstAttribute="leading" secondItem="QBi-85-tia" secondAttribute="leading" id="nbN-MP-6Cg"/>
+                            <constraint firstItem="zAh-Db-070" firstAttribute="top" secondItem="QBi-85-tia" secondAttribute="top" constant="36" id="oRf-py-wEu"/>
+                            <constraint firstAttribute="bottom" secondItem="zAh-Db-070" secondAttribute="bottom" constant="453" id="xeZ-Cq-Er4"/>
+                            <constraint firstItem="fvz-vn-EAm" firstAttribute="top" secondItem="zAh-Db-070" secondAttribute="bottom" constant="8" symbolic="YES" id="zeD-ja-9gm"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="QBi-85-tia"/>
                     </view>
@@ -168,6 +185,7 @@
                         <outlet property="iitemTopics" destination="fvz-vn-EAm" id="600-aW-yLL"/>
                         <outlet property="itemName" destination="dXG-Kd-kPw" id="dKj-up-Bqn"/>
                         <outlet property="itemNotice" destination="zVN-pE-npe" id="HEN-BP-0Sx"/>
+                        <outlet property="itemScrollView" destination="zAh-Db-070" id="UlT-np-e4x"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mky-h1-XkI" userLabel="First Responder" sceneMemberID="firstResponder"/>
